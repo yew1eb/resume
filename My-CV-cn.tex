@@ -1,0 +1,137 @@
+\documentclass[12pt,a4paper,sans]{moderncv}
+
+%moderncv主题
+\moderncvtheme[black]{banking}
+% CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+% CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\definecolor{color0}{rgb}{0,0,0}% black
+% \definecolor{color1}{rgb}{0.95,0.20,0.20}% red
+\definecolor{color2}{rgb}{0.0,0.0,0.0}% dark grey
+
+%不显示页码
+\nopagenumbers{}
+
+%中文支持
+%\usepackage{ctex}
+\usepackage{xeCJK}
+\setCJKmainfont{楷体}
+\setCJKsansfont{黑体}
+\setCJKmonofont{楷体}
+
+
+%调整页面边距
+\usepackage{geometry}  % 页边距
+\geometry{left=1.8cm,right=1.8cm,top=1.2cm,bottom=0cm}  % 设置页边距
+\thispagestyle{empty}  % 去掉默认页码
+\AtBeginDocument{
+\hypersetup{colorlinks,urlcolor=blue} % 超链接颜色
+}
+
+\renewcommand*{\namefont}{\fontsize{30}{30}\mdseries\upshape}
+\name{周}{海}
+%\title{个人简历}
+\address{湖南省吉首市人民南路120号}{吉首大学砂子坳校区}{416000}
+\mobile{+86~152~7432~6049}
+\email{yew1eb@gmail.com}
+\homepage{yew1eb.net}
+%\extrainfo{additional information}   
+%\photo[64pt][0.4pt]{picture}        
+%\quote{Some quote (optional)}    
+
+\begin{document}
+\maketitle
+\vspace{-3.4em} % 缩小段落的间距
+\section{基本信息}
+%\cvitem{姓名}{周海} 
+%\cvitem{年龄}{21(1994-03-12)}
+%\cvitem{毕业时间}{2016-06}
+%\cvitem{求职意向}{研发工程师，算法工程师}
+
+%@{\extracolsep{\fill}} 将所有列在设定的表格宽度中均匀展开
+\begin{tabular*}{12cm}{@{\extracolsep{\fill}}ll} 
+ 姓名：周海 &籍   贯：湖南衡阳  \\
+年龄：21(1994-03-12) & 毕业时间：2016-06 \\
+求职意向：研发工程师，算法工程师\\
+\end{tabular*}
+
+\vspace{-0.5em}
+\section{教育背景}
+\cventry{2012 -- 至今}{计算机科学与技术专业}{\textsf{吉首大学}}{湖南省吉首市}{工学学士}{GPA: 3.24 / 4.0}
+
+\vspace{-0.5em}
+\section{荣誉奖励}
+%\subsection{ACM-ICPC}
+\cvline{2014}{第39届ACM国际大学生程序设计竞赛亚洲区域赛上海站 \hfill    \textsf{银奖}}
+\cvline{2014}{第39届ACM国际大学生程序设计竞赛亚洲区域赛西安站 \hfill    \textsf{银奖}}
+\cvline{2014}{湖南省第十届大学生计算机程序设计竞赛 \hfill    \textsf{一等奖（冠军）}}
+\cvline{2014}{ACM/ICPC湖南省程序设计邀请赛   \hfill    \textsf{银奖}}
+\cvline{2013}{第38届ACM国际大学生程序设计竞赛亚洲区域赛长沙站 \hfill   \textsf{优胜奖}}
+\cvline{2013}{湖南省第九届大学生计算机程序设计竞赛 \hfill    \textsf{二等奖}}
+%\subsection{其他荣誉}
+\cvline{2013-2014}{吉首大学优秀学生奖学金 \hfill    \textsf{三等奖}}
+\cvline{2012-2013}{吉首大学优秀学生奖学金 \hfill    \textsf{一等奖}}
+
+\vspace{-0.5em}
+\section{校园经历}
+\begin{itemize}
+\item[-] 高一开始学习编程，参加NOIP竞赛，虽未取得优秀成绩，但奠定了良好的编程基础
+\item[-] 大一暑假组建学校ACM集训队，并担任集训队长至今，带领队伍首次打进亚洲区域赛
+\end{itemize}
+
+\vspace{-0.5em}
+\section{实习经历}
+\cvitem{}{张家界广电传媒有限责任公司网络媒体平台 - 爱视网 \hfill 2015/01 - 2015/02}{修复商城模块的后台支付功能,以及现实用户到店自提功能}
+
+
+\vspace{-0.5em}
+\section{个人作品}
+\cventry{}{使用Swing实现界面,通过多线程控制鱼的游动、子弹移动}{\textsf{Java实现捕鱼达人}}{大三下学期}{}
+{}
+\cventry{}{使用JSP和MySQL,实现了班级信息、学生信息管理功能}{\textsf{简易学生信息管理系统}}{大二下学期}{}{}
+\cventry{}{基于Windows Console, 实现了积分、难度设置和播放背景音乐功能}{\textsf{C++实现俄罗斯方块}}{大一下学期}{}{}
+
+\vspace{-0.5em}
+\section{专业技能}
+\subsection{计算机技能}
+\cvitem{\textsf{编程语言}}{熟悉C/C++，了解Python，Java，Php}
+\cvitem{\textsf{基础技能}}{熟悉Linux的常用命令，了解多线程和Socket网络编程}
+\cvitem{\textsf{开发工具}}{Vim，Eclipse，Visual Studio，MySQL，Git，Makefile}
+
+\subsection{其它技能}
+\cvitem{\textsf{问题解决}}{能在较短时间内独立思考、周密分析问题并形成解决问题的思路；由于经常参加程序竞赛，提高了数学英语功底、提升了算法设计能力和编程技巧、养成了良好的协作精神、锻炼了心理素质和临场应变能力}
+%\cvitem{\textsf{学习能力}}{对新技术有浓厚的兴趣，有很强的自学能力}
+%\cvitem{\textsf{团队合作}}{有良好的沟通能力和很强的团队意识}
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
