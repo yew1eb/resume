@@ -17,9 +17,8 @@
 + CTEX中文套装是基于 Windows 下的 MiKTeX系统，集成了编辑器 WinEdt和 PostScript处理软件 Ghostscript 和 GSview 等主要工具。 CTEX中文套装在 MiKTeX的基础上增加了对中文的完整支持。 CTEX中文套装支持 CCT 和 CJK 两种中文 TEX处理方式。   
 + CTEX官方主页 <http://www.ctex.org/HomePage>
 
-## 链接
-
-+ CTEX HomePage<http://www.ctex.org/HomePage>   
+## 资料
++ <<LateX入门>>－刘海洋
 + <http://www.chinatex.org/>
 + [专业的LaTeX: 在Linux下编写高质量的文档](https://www.ibm.com/developerworks/cn/linux/l-latex/)
 + [使用 LyX 以图形形式创建 LaTeX 文档](http://www.ibm.com/developerworks/cn/opensource/os-lyx/)
