@@ -1,0 +1,172 @@
+\documentclass[12pt,a4paper,sans]{moderncv}
+
+%moderncv主题
+\moderncvtheme[blue]{classic}
+% CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+% CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\definecolor{color0}{rgb}{0,0,0}% black
+% \definecolor{color1}{rgb}{0.95,0.20,0.20}% red
+\definecolor{color2}{rgb}{0.0,0.0,0.0}% dark grey
+
+%不显示页码
+%\nopagenumbers{}
+
+
+\usepackage{pifont}
+
+%中文支持
+\usepackage{xeCJK}
+\setCJKmainfont{楷体}
+\setCJKsansfont{黑体}
+\setCJKmonofont{楷体}
+
+
+%调整页面边距
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=1.5cm]{geometry}  % 页边距 {left=2cm,right=2cm,top=1cm,bottom=1cm} 
+
+\AtBeginDocument{
+\hypersetup{colorlinks,urlcolor=blue} % 超链接颜色
+}
+
+
+\renewcommand*{\namefont}{\fontsize{50}{52}\mdseries\upshape}
+\name{周}{海}
+\title{}
+\address{湖南省吉首市人民南路120号}{吉首大学砂子坳校区}{416000}
+\mobile{+86~152~7432~6049}
+\email{yew1eb@gmail.com}
+\homepage{http://blog.csdn.net/yew1eb}
+\social[github]{https://github.com/yew1eb}
+%\homepage{yew1eb.net}
+%\extrainfo{additional information}   
+\photo[85pt]{picture}        
+%\quote{Some quote (optional)}    
+
+\begin{document}
+\maketitle
+%\vspace{-3em} % 缩小段落的间距
+\section{基本信息}
+\cvitem{姓名}{周海} 
+\cvitem{年龄}{21(1994-03-12)}
+\cvitem{籍贯}{湖南衡阳}
+\cvitem{毕业时间}{2016-06}
+\cvitem{求职意向}{研发工程师}
+
+
+\section{教育背景}
+\cventry{2012--至今}{\textsf{吉首大学} \hfill 湖南省吉首市}{}{}{}{计算机科学与技术专业,工学学士}
+
+
+\section{个人经历}
+\cvitem{2008--2012}{高中时代参加了两届NOIP竞赛，学习并掌握了基本的数据结构和算法}
+\cvitem{2012--至今}{组建ACM集训队，并担任第一任集训队长，带领队伍首次打进亚洲区域赛}
+
+\section{项目经验}
+\cventry{}{\textsf{Online Judge判题端开发}}{\url{https://github.com/yew1eb/OnlineJudgeCore}}{}{}{
+	这个项目实现了一个Online judge用来提供在线测评服务并被用来帮助校ACM/ICPC队伍组织和管理各种训练计划和相关比赛。
+	此系统还将运用于大学生计算机课程上机实验。
+	\begin{description}
+		\item[\textsf{实现原理}] \hfill \\
+			基于Linux平台开发，通过Daemon进程（Python实现）从MySQL数据库实时获取判题任务，多线程调用Judge程序（C实现）编译和测试用户提交的代码，并将返回结果信息存入数据库
+	\end{description}
+}
+
+\vspace{1em}
+\cventry{}{\textsf{网站日志分析系统}}{}{}{}{
+	通过分布式hadoop集群处理网站产生的大量日志。通过分布式存储，按小时保存并以小时为周期定时将上一小时的数据同步到日志分析机上。统计数据按小时更新，统计项包括关键词搜索量PV，网站的浏览量PV，类别访问量，访客数UV（包括新访客数、新访客比例），跳出率等信息供网站管理者分析网站使用。
+	\begin{description}
+		\item[\textsf{系统支持}] Ubuntu Server + JDK-1.8 + CDH-5.4.1 + Hive-0.9.0 + MySQL5
+		\item[\textsf{系统实现}] \hfill 
+			\begin{enumerate}
+				\item 通过Shell命令把日志数据导入到HDFS中 
+				\item 使用MapReduce对数据进行清洗,再存储到HDFS中
+				\item 使用Hive对清洗后的数据进行多维分析
+				\item 使用Sqoop把分析结果导入到MySQL中
+				\item 返回链接给Web前端，将结果以图表，表格等多种形式表示出来。
+			\end{enumerate} %itemize
+		\item[\textsf{个人职责}] 独立完成。
+	\end{description}
+}
+
+
+\cventry{}{\textsf{捕鱼达人 - Java版}}{ \url{https://github.com/yew1eb/FishingMaster} }{}{}{
+	\begin{description}
+		\item[\textsf{实现原理}] \hfill 
+			\begin{itemize}
+				\item 运用面向对象的思想，通过Swing实现界面的绘制
+				\item 多线程实现产生多种鱼,实现鱼的游动,以及网的移动
+				\item 事件监听实现鼠标捕鱼事件的捕获
+			\end{itemize} %itemize
+	\end{description}
+}
+
+\vspace{1em}
+\cventry{}{\textsf{CrawlNews}}{ \url{https://github.com/yew1eb/CrawlNews}}{}{}{
+	可部署到Linux服务器上，实时爬取教务处公告，判断是否有新通知，并把新通知推送到指定邮件的简单Python爬虫程序。
+}
+
+\section{荣誉奖励}
+\subsection{ACM-ICPC}
+\cvline{2014}{第39届ACM国际大学生程序设计竞赛亚洲区域赛上海站 \hfill    \textsf{银奖}}
+\cvline{2014}{第39届ACM国际大学生程序设计竞赛亚洲区域赛西安站 \hfill    \textsf{银奖}}
+\cvline{2014}{湖南省第十届大学生计算机程序设计大赛 \hfill    \textsf{一等奖（冠军）}}
+\cvline{2014}{ACM/ICPC湖南省程序设计邀请赛   \hfill    \textsf{银奖}}
+\cvline{2013}{第38届ACM国际大学生程序设计竞赛亚洲区域赛长沙站 \hfill   \textsf{优胜奖}}
+\cvline{2013}{湖南省第九届大学生计算机程序设计竞赛 \hfill    \textsf{二等奖}}
+\subsection{其他荣誉}
+\cvline{2013--2014}{吉首大学优秀学生奖学金 \hfill    \textsf{三等奖}}
+\cvline{2012--2013}{吉首大学优秀学生奖学金 \hfill    \textsf{一等奖}}
+
+
+
+\section{专业技能}
+%\subsection{计算机技能}
+\cvline{\ding{227}}{熟悉C/C++编程，有Java, Python, Php开发经验}
+\cvline{\ding{227}}{有半年以上Linux使用经验，了解基本的操作系统，计算机网络知识}
+\cvline{\ding{227}}{掌握Hadoop集群的搭建和配置，理解HDFS和MapReduce的设计原理}
+
+%\cvitem{\textsf{编程语言}}{C/C++ > Java > Python,PHP}
+%\cvitem{\textsf{基础技能}}{熟悉Linux开发环境，了解基本的操作系统，计算机网络知识}
+%\cvitem{\textsf{其他技能}}{掌握Hadoop集群的搭建和配置，理解HDFS和MapReduce的设计原理}
+
+
+\section{自我评价}
+%\subsection{其它技能}
+\cvitem{\textsf{问题解决}}{能在较短时间内独立思考、周密分析问题并形成解决问题的思路；由于经常参加程序竞赛，提高了数学英语功底、提升了算法设计能力和编程技巧、养成了良好的协作精神、锻炼了心理素质和临场应变能力}
+\cvitem{\textsf{学习能力}}{对新技术有浓厚的兴趣，有很强的自学能力}
+%\cvitem{\textsf{团队合作}}{在ACM竞赛中，积累了大量团队合作解题的经验，有良好的沟通能力和很强的团队意识}
+\cvitem{\textsf{兴趣爱好}}{算法竞赛，阅读，篮球，爬山，骑行}
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
