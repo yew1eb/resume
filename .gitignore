@@ -1,6 +1,7 @@
 .idea
-.aux
-.log
-.out
+
+/*/*.aux
+/*/*.log
+/*/*.out
 .pdf
-.gz
+/*/*.gz
