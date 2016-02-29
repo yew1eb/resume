@@ -2,6 +2,8 @@
 
 **************
 
+#### Last-Version　－　最新版  
+
 #### 2016-Campus　－　2016校园招聘简历　－　Last Updated: Sep 5, 2015
 * 未使用简历模板，纯Latex编写  
 
