@@ -1,1 +1,6 @@
 .idea
+.aux
+.log
+.out
+.pdf
+.gz
