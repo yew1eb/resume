@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 name='resume'
 if [ -d .tmp ]
