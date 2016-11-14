@@ -1,6 +1,7 @@
 % resume.tex
 
 \documentclass[a4paper,11pt]{article}
+\newlength{\outerbordwidth}
 \pagestyle{empty}
 \raggedbottom
 \raggedright
@@ -24,12 +25,6 @@
 \renewcommand{\arraystretch}{1.15}
 
 
-\newlength{\outerbordwidth}
-\setlength{\outerbordwidth}{3pt}  % Width of border outside of title bars
-\definecolor{shadecolor}{gray}{0.75}  % Outer background color of title bars (0 = black, 1 = white)
-\definecolor{shadecolorB}{gray}{0.93}  % Inner background color of title bars
-
-
 %--------------------------------------------
 % Chinese support
 \usepackage{xeCJK}
@@ -38,37 +33,44 @@
 \setCJKmonofont{STKaiti}
 %--------------------------------------------
 
+%-----------------------------------------------------------
+%Edit these values as you see fit
+\setlength{\outerbordwidth}{3pt}  % Width of border outside of title bars
+\definecolor{shadecolor}{gray}{0.75}  % Outer background color of title bars (0 = black, 1 = white)
+\definecolor{shadecolorB}{gray}{0.93}  % Inner background color of title bars
 
 %-----------------------------------------------------------
 %Margin setup
 \setlength{\evensidemargin}{-0.25in}
+\setlength{\headheight}{-0.25in}
+\setlength{\headsep}{0in}
 \setlength{\oddsidemargin}{-0.25in}
-
-\setlength{\paperwidth}{8.6in}
-\setlength{\textwidth}{7.1in}
-
-\setlength{\textheight}{11in}
-\setlength{\topmargin}{-1in}
+\setlength{\paperheight}{11in}
+\setlength{\paperwidth}{8.5in}
+\setlength{\tabcolsep}{0in}
+\setlength{\textheight}{9.75in}
+\setlength{\textwidth}{7in}
+\setlength{\topmargin}{-0.3in}
+\setlength{\topskip}{0in}
+\setlength{\voffset}{0.1in}
 %-----------------------------------------------------------
 
 
 %---------------------------------------------------------------------------------------------------------------
 %Custom commands
-\newcommand{\resheading}[1]{
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\resheading}[1]{\vspace{8pt}
   \parbox{\textwidth}{\setlength{\FrameSep}{\outerbordwidth}
     \begin{shaded}
-\setlength{\fboxsep}{0pt}\framebox[\textwidth][l]{\setlength{\fboxsep}{3pt}\fcolorbox{shadecolorB}{shadecolorB}{\textbf{\sffamily{\mbox{~}\makebox[6.882in][l]{\large #1} \vphantom{p\^{E}}}}}}
+\setlength{\fboxsep}{0pt}\framebox[\textwidth][l]{\setlength{\fboxsep}{4pt}\fcolorbox{shadecolorB}{shadecolorB}{\textbf{\sffamily{\mbox{~}\makebox[6.762in][l]{\large #1} \vphantom{p\^{E}}}}}}
     \end{shaded}
-  }\vspace{-10pt}
+  }\vspace{-5pt}
 }
-
 \newcommand{\ressubheading}[4]{
-	\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
-		\textbf{#1} & \textit{#2} \\
+\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
 		\textit{#3} & \textit{#4} \\
-	\end{tabular*}
-	\vspace{-10pt}
-}
+\end{tabular*}\vspace{-6pt}}
 %---------------------------------------------------------------------------------------------------------------
 
 
@@ -92,22 +94,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \resheading{荣誉奖励}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{center}
-\begin{tabular*}{6.6in}{l@{\extracolsep{\fill}}r}
-		\multicolumn{2}{c}{第40 届ACM 国际大学生程序设计竞赛东亚洲大陆子赛区 \cftdotfill{\cftdotsep} \textbf{铜奖}}\\
-		\multicolumn{2}{c}{第40 届ACM 国际大学生程序设计竞赛亚洲区域赛北京站 \cftdotfill{\cftdotsep} \textbf{铜奖}}\\
-		\multicolumn{2}{c}{第40 届ACM 国际大学生程序设计竞赛亚洲区域赛长春站 \cftdotfill{\cftdotsep} \textbf{银奖}}\\
-		\multicolumn{2}{c}{第39 届ACM 国际大学生程序设计竞赛亚洲区域赛上海站 \cftdotfill{\cftdotsep} \textbf{银奖}}\\
-		\multicolumn{2}{c}{第39 届ACM 国际大学生程序设计竞赛亚洲区域赛西安站 \cftdotfill{\cftdotsep} \textbf{银奖}}\\
-		\multicolumn{2}{c}{2014年湖南省第十届大学生计算机程序设计竞赛 \cftdotfill{\cftdotsep} \textbf{冠军}}\\
-		\multicolumn{2}{c}{2013年湖南省第九届大学生计算机程序设计竞赛 \cftdotfill{\cftdotsep} \textbf{二等奖}}\\
-		\multicolumn{2}{c}{2016届湖南省优秀毕业生 \cftdotfill{\cftdotsep} }\\
-		\multicolumn{2}{c}{2014–2015学年~国家励志奖学金 \cftdotfill{\cftdotsep} }\\
-		\multicolumn{2}{c}{2014–2015学年~吉首大学优秀学生奖学金 \cftdotfill{\cftdotsep} \textbf{一等奖}}\\
-		\multicolumn{2}{c}{2012–2013学年~吉首大学优秀学生奖学金 \cftdotfill{\cftdotsep} \textbf{一等奖}}\\
-		\vphantom{E}
-\end{tabular*}\vspace{-25pt}
-\end{center}
+\begin{itemize}
+\item[-] ACM-ICPC亚洲区域赛三银二铜一铁，一次省赛冠军
+\item[-] 2016届湖南省优秀毕业生，一次国家励志奖学金，多次专业一等奖学金
+\end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \resheading{个人经历}
@@ -121,7 +111,7 @@
 \resheading{工作经历}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{itemize}
-\item \hspace{-15pt}\ressubheading{美团外卖-商家端-实习}{Java开发实习生}{负责商家账号体系相关业务开发}{2016.03 - 2016.06}
+\item \hspace{-15pt}\ressubheading{美团外卖-商家端-实习}{Java开发实习生}{后台开发}{2016.03 - 2016.06}
 \vspace{15pt}
 \item \hspace{-15pt}\ressubheading{美团外卖-商家端-基础服务平台组}{Java后端开发工程师}{基础中间件平台开发}{2016.06 - 至今}
 \end{itemize}
@@ -131,10 +121,10 @@
 \resheading{专业技能}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{itemize}
-\item[-] Java
+\item[-] Java熟练
 \item[-] git，maven，shell，IntelliJ IDEA
 \item[-] Spring，SpringMVC，MyBatis，MySQL，Thrift
-\item[-] Kafka，Storm， Spark
+\item[-] Kafka，Storm，Spark
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
